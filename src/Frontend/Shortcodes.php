@@ -54,19 +54,18 @@ class Shortcodes {
 		$reviews     = $reviews_obj->get_reviews();
 
 		/**
-		 * Filters the data entries after fetching them from the database and before the output to the browser.
+		 * Filters reviews after fetching them from the database and before the output to the browser.
 		 *
 		 * @since 1.0.0
 		 *
-		 * @param array     $data The data.
-		 * @param int|false $id   The insert ID, or false on error.
+		 * @param array $reviews Found reviews.
 		 */
 		$reviews = apply_filters( 'classic_wp_plugin_data_entries', $reviews );
 
 		ob_start();
 
 		/**
-		 * Executes before displaying the table output in the shotrcode classic_wp_display_list.
+		 * Executes before displaying the table output in the shortcode [classic_wp_display_list].
 		 *
 		 * @since 1.0.0
 		 */
@@ -78,10 +77,10 @@ class Shortcodes {
 			<?php
 		} else {
 
-			Plugin::load_view( 'entries-table', array( 'entries' => $reviews['data'] ) );
+			Plugin::load_view( 'reviews-table', array( 'reviews' => $reviews['data'] ) );
 
 			/**
-			 * Executes between displaying the table output and the search form in the shotrcode classic_wp_display_list.
+			 * Executes between displaying the table output and the search form in the shotrcode [classic_wp_display_list].
 			 *
 			 * @since 1.0.0
 			 */
@@ -91,7 +90,7 @@ class Shortcodes {
 		}
 
 		/**
-		 * Executes after displaying the search form in the shotrcode classic_wp_display_list.
+		 * Executes after displaying the search form in the shotrcode [classic_wp_display_list].
 		 *
 		 * @since 1.0.0
 		 */

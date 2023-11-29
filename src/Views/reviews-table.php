@@ -15,12 +15,12 @@
 		</tr>
 	</thead>
 	<tbody>
-		<?php if ( empty( $vars['entries'] ) ) : ?>
+		<?php if ( empty( $vars['reviews'] ) ) : ?>
 			<tr>
 				<td colspan="3">No reviews found!</td>
 			</tr>
 		<?php else : ?>
-			<?php foreach ( $vars['entries'] as $review ) : ?>
+			<?php foreach ( $vars['reviews'] as $review ) : ?>
 				<tr>
 					<td><?php echo esc_html( $review->name ); ?></td>
 					<td><?php echo esc_html( $review->rating ); ?></td>
