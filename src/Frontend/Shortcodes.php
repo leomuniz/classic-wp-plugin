@@ -43,12 +43,12 @@ class Shortcodes {
 	}
 
 	/**
-	 * Shortcode [classic_wp_display_form] to display a list with the data in the custom table.
+	 * Shortcode [classic_wp_display_list] to display a list with the data in the custom table.
 	 * It also process incoming $_POST when searching for an entry.
 	 *
 	 * @since 1.0.0
 	 */
-	public static function display_entries_list_shortcode() {
+	public static function display_reviews_list_shortcode() {
 
 		$reviews_obj = new Reviews();
 		$reviews     = $reviews_obj->get_reviews();

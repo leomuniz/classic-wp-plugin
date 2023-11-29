@@ -59,7 +59,7 @@ class Plugin {
 
 		// Shortcode declaration.
 		add_shortcode( 'classic_wp_display_form', array( 'ClassicWPPlugin\Frontend\Shortcodes', 'display_form_shortcode' ) );
-		add_shortcode( 'classic_wp_display_list', array( 'ClassicWPPlugin\Frontend\Shortcodes', 'display_entries_list_shortcode' ) );
+		add_shortcode( 'classic_wp_display_list', array( 'ClassicWPPlugin\Frontend\Shortcodes', 'display_reviews_list_shortcode' ) );
 
 		// REST API hooks.
 		add_action( 'rest_api_init', array( 'ClassicWPPlugin\Core\RestAPI', 'register_routes' ) );
