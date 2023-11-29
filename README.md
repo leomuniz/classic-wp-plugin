@@ -1,4 +1,4 @@
-# classi-wp-plugin
+# classic-wp-plugin
 A classic WordPress plugin with custom table, shortcodes to insert and retrieve data and public REST API endpoints.
 
 The plugin creates the `{prefix}_classic_wp_plugin` table, 2 shortcodes to handle the data into the table and 2 REST API endpoints. 
