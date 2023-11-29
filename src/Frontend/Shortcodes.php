@@ -60,7 +60,7 @@ class Shortcodes {
 		 *
 		 * @param array $reviews Found reviews.
 		 */
-		$reviews = apply_filters( 'classic_wp_plugin_data_entries', $reviews );
+		$reviews = apply_filters( 'classic_wp_plugin_found_reviews', $reviews );
 
 		ob_start();
 
@@ -69,7 +69,7 @@ class Shortcodes {
 		 *
 		 * @since 1.0.0
 		 */
-		do_action( 'classic_wp_plugin_before_display_data_table' );
+		do_action( 'classic_wp_plugin_before_display_reviews_table' );
 
 		if ( empty( $reviews['data'] ) && empty( $reviews['q'] ) ) {
 			?>
@@ -84,7 +84,7 @@ class Shortcodes {
 			 *
 			 * @since 1.0.0
 			 */
-			do_action( 'classic_wp_plugin_between_data_table_and_search_form' );
+			do_action( 'classic_wp_plugin_between_reviews_table_and_search_form' );
 
 			Plugin::load_view( 'search-form', array( 'search_query' => $reviews['search_query'] ) );
 		}
@@ -94,7 +94,7 @@ class Shortcodes {
 		 *
 		 * @since 1.0.0
 		 */
-		do_action( 'classic_wp_plugin_after_display_data_table' );
+		do_action( 'classic_wp_plugin_after_display_reviews_table' );
 
 		return ob_get_clean();
 	}
