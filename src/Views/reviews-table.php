@@ -15,7 +15,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<?php if ( empty( $vars['reviews'] ) ) : ?>
+		<?php if ( empty( $vars['reviews_count'] ) ) : ?>
 			<tr>
 				<td colspan="3">No reviews found!</td>
 			</tr>

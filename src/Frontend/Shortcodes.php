@@ -71,13 +71,19 @@ class Shortcodes {
 		 */
 		do_action( 'classic_wp_plugin_before_display_reviews_table' );
 
-		if ( empty( $reviews['data'] ) && empty( $reviews['q'] ) ) {
+		if ( empty( $reviews['data'] ) && empty( $reviews['search_query'] ) ) {
 			?>
 			<h4><?php esc_html_e( 'There are no reviews yet!', 'classic-wp-plugin' ); ?></h4>
 			<?php
 		} else {
 
-			Plugin::load_view( 'reviews-table', array( 'reviews' => $reviews['data'] ) );
+			Plugin::load_view(
+				'reviews-table',
+				array(
+					'reviews'       => $reviews['data'],
+					'reviews_count' => $reviews['count'],
+				)
+			);
 
 			/**
 			 * Executes between displaying the table output and the search form in the shotrcode [classic_wp_display_list].
