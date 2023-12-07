@@ -29,7 +29,9 @@ class RestAPI {
 			array(
 				'methods'             => 'POST',
 				'callback'            => array( 'ClassicWPPlugin\Core\RestAPI', 'insert_review' ),
-				'permission_callback' => '__return_true',
+				'permission_callback' => function () {
+					return current_user_can( 'publish_posts' );
+				  },
 			)
 		);
 
